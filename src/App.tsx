@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Screen from "./components/Screen";
 import BackgroundFade from "./components/BackgroundFade";
 import "./App.css";
-const NAME = import.meta.env.VITE_NAME
-const LITTLE_NAME = import.meta.env.VITE_LITTLE_NAME
+
+import MusicPlayer from "./components/MusicPlayer";
+
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState(1);
   const [isVisible, setIsVisible] = useState(true);
@@ -20,7 +21,7 @@ const App: React.FC = () => {
   const screens = [
     {
       screenNumber: 1,
-      message: `Hola señorita ${NAME} muy buenos días 😊🌞`,
+      message: `Hola señorita Mayte muy buenos días 😊🌞`,
       background: "/bg1.png",
       buttons: [
         { text: "Hola, buenos días! 😍", className: "btn-hello  btn-primary", nextScreen: 2 },
@@ -50,7 +51,7 @@ const App: React.FC = () => {
     },
     {
       screenNumber: 4,
-      message: `¡Gracias mi ${LITTLE_NAME} hermosa, por aceptar! No sabes lo feliz que me hace saber que compartiremos este día tan especial. 🥰🐉`,
+      message: `Gracias mi niña hermosa por aceptar , sabes que contigo lo quiero todo. No olvidaremos ese día tan especial 🥰`,
       background: "/bg4.png",
       buttons: [
       ],
@@ -88,7 +89,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      {/* <MusicPlayer /> */}
+      <MusicPlayer />
 
       {currentScreenData && <BackgroundFade background={currentScreenData.background} />}
 
