@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Screen from "./components/Screen";
 import BackgroundFade from "./components/BackgroundFade";
 import "./App.css";
-import MusicPlayer from "./components/MusicPlayer";
 const NAME = import.meta.env.VITE_NAME
 const LITTLE_NAME = import.meta.env.VITE_LITTLE_NAME
 const App: React.FC = () => {
